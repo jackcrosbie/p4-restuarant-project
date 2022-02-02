@@ -2,14 +2,14 @@
 
 
 ## Contents
-- Introduction
-- UX
-- Technologies
-- Features
-- Testing
-- Deployment
-- Credits
-- Acknowledgements
+- [Introduction](https://github.com/jackcrosbie/p4-restuarant-project/edit/main/README.md#introduction)
+- [UX](https://github.com/jackcrosbie/p4-restuarant-project/blob/main/README.md#ux)
+- [Technologies](https://github.com/jackcrosbie/p4-restuarant-project/edit/main/README.md#technologies)
+- [Features](https://github.com/jackcrosbie/p4-restuarant-project/edit/main/README.md#features)
+- [Testing](https://github.com/jackcrosbie/p4-restuarant-project/edit/main/README.md#testing)
+- [Deployment](https://github.com/jackcrosbie/p4-restuarant-project/edit/main/README.md#deployment)
+- [Credits](https://github.com/jackcrosbie/p4-restuarant-project/edit/main/README.md#credit)
+- [Acknowledgements](https://github.com/jackcrosbie/p4-restuarant-project/edit/main/README.md#acknowledgements)
 
 
 ## Introduction
