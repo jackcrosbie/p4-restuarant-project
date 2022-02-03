@@ -71,6 +71,19 @@ From an Admin point of view the website would mean less work when it came throug
 
 **Features Implemented**
 
+_As a User I want to be able to request a booking so that i can easily book a table_
+
+As stated above, one of the primary functions of Jack's Bistro website will be to allow user/customers to request a booking. The information from this bookings would be stored in a database, in our case using PostgresSQL. The user will be required to enter their name, email, number in party, date required and time desired.
+
+_As a Site Admin I want to be able to approve or reject bookings so that i can control capacity for the restuarant_
+
+The site admin needs the ability to approve and reject bookings. This helps the owner maintain control of customer numbers to prevent overbookings. Bookings approval is required so the customer gets confirmation the restuarant can accommodate them on the date and time requested. This information will be stored on the PostgreSQL database and the site admin will be able to access it on the site admin panel. The admin panel will be generated and accessed through Django.
+
+_As a Site Admin I want to delete and manage bookings so that i can maintain the calender_
+
+Due to the nature of the website/product cancellations will occur. Either due to illness or unforeseen circumstances customers will have to cancel or rearrange bookings. This means the site admin will need to have the ability to cancel or change bookings on the system. This keeps everything tidy and more easily managed. This function will be created through a combination of PostgreSQL and Django.
+
+
 **Features Left To Implement**
 
 _As a User I want a stylish looking website so that i can navigate it easily_
@@ -82,22 +95,9 @@ _As a User I want to be able to easily navigate the site so that i can easily vi
 
 A well designed and thoughtout website should allow the user to navigate through it effectively. They should be able to move to the content they wish to view intuitively and quickly. The main approach to solve this was to put in a navigation bar at the top of the page. The links provided (Home, Reservations, Menu, Contact Us) allow the user go to the page they need with one click of a mouse. I used general HTML and CSS styling in conjunction with Bootstrap to create a fully functioning navigational bar at the top of everypage of the website. In the mobile version of the website the navigation bar is a Hamburger stlye menu achieved through Bootstrap.
 
-_As a User I want to be able to request a booking so that i can easily book a table_
-
-As stated above, one of the primary functions of Jack's Bistro website will be to allow user/customers to request a booking. The information from this bookings would be stored in a database, in our case using PostgresSQL. The user will be required to enter their name, email, number in party, date required and time desired.
 
 _As a User I want to be able to edit my bookings so that i can make a correction or change if needed_
 
-
-
-_As a Site Admin I want to be able to approve or reject bookings so that i can control capacity for the restuarant_
-
-The site admin needs the ability to approve and reject bookings. This helps the owner maintain control of customer numbers to prevent overbookings. Bookings approval is required so the customer gets confirmation the restuarant can accommodate them on the date and time requested. This information will be stored on the PostgreSQL database and the site admin will be able to access it on the site admin panel. The admin panel will be generated and accessed through Django.
-
-
-_As a Site Admin I want to delete and manage bookings so that i can maintain the calender_
-
-Due to the nature of the website/product cancellations will occur. Either due to illness or unforeseen circumstances customers will have to cancel or rearrange bookings. This means the site admin will need to have the ability to cancel or change bookings on the system. This keeps everything tidy and more easily managed. This function will be created through a combination of PostgreSQL and Django.
 
 _As a User I want to be able to register so that i can save my information for future bookings_
 
