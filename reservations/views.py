@@ -1,14 +1,13 @@
 from django.shortcuts import render
-from django import forms
+from django.views import generic
+from django.views.generic.edit import FormView
 from .models import Reservations
 from .forms import ReservationForm
 
 
 # Create your views here.
-class ReservationsPage(forms.Form):
-    name = forms.CharField(max_length=50)
-    phone_number = forms.IntegerField()
-    email = forms.EmailField()
-    date = forms.DateField()
-    time = forms.TimeField()
-    number_of_party = forms.IntegerField()
+class ReservationsFormView(FormView):
+    template_name = "reservations.html"
+    form_class = ReservationForm
+    success_url = '/index/'
+

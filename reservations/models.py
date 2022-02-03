@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django import forms
 
 
 # Create your models here.
@@ -10,7 +11,7 @@ class Reservations(models.Model):
     date = models.DateField()
     time = models.TimeField()
     number_of_party = models.IntegerField()
-    #approved = models.BooleanField(default=False)
+    # approved = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['date']
