@@ -2,6 +2,7 @@ from .models import Reservations
 from django import forms
 from .widgets import DatePickerInput, TimePickerInput
 
+
 class ReservationForm(forms.ModelForm):
     class Meta:
         model = Reservations
