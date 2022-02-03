@@ -14,6 +14,8 @@ class Reservations(models.Model):
 
     class Meta:
         ordering = ['date']
+        verbose_name = 'Reservation'
+        verbose_name_plural = 'Reservations'
 
     def __str__(self):
         return self.name
