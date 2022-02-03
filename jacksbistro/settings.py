@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cloudinary_storage',
     'django.contrib.staticfiles',
+    'bootstrap4',
+    'phonenumber_field',
     'cloudinary',
     'reservations',
 ]

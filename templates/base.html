@@ -11,6 +11,8 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
+
+
     <title>Jack's Bistro</title>
 </head>
 
@@ -18,16 +20,13 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <h1 class="text-left bg-dark font-weight-bold text-white container-fluid">Jack's Bistro</h1>
         <div class="container-fluid text-right">
-            <a class="navbar-brand" href="#"></a>
+            <a class="navbar-brand" href="/"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="#">Logout</a>
@@ -40,11 +39,11 @@
                         <a class="nav-link" href="#">Login</a>
                     </li>
                     {% endif %}
-
                 </ul>
             </div>
         </div>
     </nav>
+    
     <p>
         {% block content %}
 
@@ -55,7 +54,10 @@
             <small>Copyright &copy; Your Website</small>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js"
+        integrity="sha512-RCgrAvvoLpP7KVgTkTctrUdv7C6t7Un3p1iaoPr1++3pybCyCsCZZN7QEHMZTcJTmcJ7jzexTO+eFpHk4OCFAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
-</body>
+
 
 </html>

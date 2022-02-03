@@ -1,8 +1,12 @@
 from .models import Reservations
 from django import forms
-
+from .widgets import DatePickerInput, TimePickerInput
 
 class ReservationForm(forms.ModelForm):
     class Meta:
         model = Reservations
-        fields = ('name', 'phone_number', 'email', 'date', 'time', 'number_of_party')
+        fields = ['name', 'phone_number', 'email', 'date', 'time', 'number_of_party']
+        widgets = {
+            'date': DatePickerInput(format='%d-%m-%Y'),
+            'time': TimePickerInput(),
+        }
