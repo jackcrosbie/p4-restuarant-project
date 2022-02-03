@@ -8,3 +8,7 @@ class ReservationAdmin(admin.ModelAdmin):
     list_display = ('name', 'date', 'time', 'number_of_party')
     list_filter = ('name', 'date')
     search_fields = ['name', 'date', 'time', 'email']
+    #actions = ['approve_reservations']
+
+    def approve_reservations(self, request, queryset):
+        queryset.update(approve=True)
