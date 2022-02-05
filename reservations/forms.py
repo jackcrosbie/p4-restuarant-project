@@ -9,5 +9,4 @@ class ReservationForm(forms.ModelForm):
         fields = ['name', 'phone_number', 'email', 'date', 'time', 'number_of_party']
         widgets = {
             'date': DatePickerInput(format='%d-%m-%Y'),
-            'time': TimePickerInput(),
         }
