@@ -1,9 +1,8 @@
 """ django Imports """
 from django.db import models
-from django.contrib.auth.models import User
 from phonenumber_field.modelfields import PhoneNumberField
 
-times = (
+time_options = (
     ("12:00", "12pm"),
     ("14:00", "2pm"),
     ("16:00", "4pm"),
@@ -12,18 +11,19 @@ times = (
     ("22:00", "10pm"),
     )
 
+party_size = ((1, "1"), (2, "2"), (3, "3"), (4, "4"), (5, 5), (6, 6))
+
 
 class Reservations(models.Model):
 
-    party_size = ((1, "1"), (2, "2"), (3, "3"), (4, "4"), (5, 5), (6, 6))
+    """ reservation form categories and attributes """
     name = models.CharField(max_length=50)
     phone_number = PhoneNumberField()
     email = models.EmailField()
     date = models.DateField()
-    time = models.IntegerField(choices=times, default="12pm")
+    time = models.IntegerField(choices=time_options, default="12pm")
     number_of_party = models.IntegerField(choices=party_size, default=1)
     # approved = models.BooleanField(default=False)
-
 
     class Meta:
         ordering = ['date']
