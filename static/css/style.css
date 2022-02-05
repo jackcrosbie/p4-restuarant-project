@@ -5,3 +5,8 @@ body {
 form, table{
     padding: 10px;
 }
+
+#msg {
+    background-color: coral;
+    border-radius: 2px;
+}
