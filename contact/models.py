@@ -2,6 +2,7 @@
 from django.db import models
 from django.core.validators import RegexValidator
 
+
 time_options = (
     ("12:00", "12pm"),
     ("14:00", "2pm"),
@@ -11,13 +12,20 @@ time_options = (
     ("22:00", "10pm"),
     )
 
-party_size = ((1, "1"), (2, "2"), (3, "3"), (4, "4"), (5, 5), (6, 6))
+
+event_type = (
+    ("private_function", "Private Function"),
+    ("large_group_booking", "Large Group Booking"),
+    ("feedback_comment", "Feedback or Comment"),
+    ("other", "Other"),
+)
 
 """ validates phone numbers """
 phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$")
 
 
-class Reservations(models.Model):
+
+class ContactUs(models.Model):
 
     """ reservation form categories and attributes """
     name = models.CharField(max_length=50)
@@ -25,12 +33,5 @@ class Reservations(models.Model):
     email = models.EmailField()
     date = models.DateField()
     time = models.CharField(choices=time_options, default="12pm", max_length=10)
-    number_of_party = models.IntegerField(choices=party_size, default=1)
-    # approved = models.BooleanField(default=False)
-
-
-    class Meta:
-        ordering = ['date']
-        verbose_name = 'Reservation'
-        verbose_name_plural = 'Reservations'
-
+    event = models.CharField(choices=event_type, max_length=50)
+    message = models.TextField()

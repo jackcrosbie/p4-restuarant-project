@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'cloudinary',
     'reservations',
+    'contact',
 ]
 
 SITE_ID = 1
