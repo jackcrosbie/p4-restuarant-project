@@ -24,7 +24,7 @@ class Reservations(models.Model):
     phone_number = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True)
     email = models.EmailField()
     date = models.DateField()
-    time = models.IntegerField(choices=time_options, default="12pm")
+    time = models.CharField(choices=time_options, default="12pm", max_length=10)
     number_of_party = models.IntegerField(choices=party_size, default=1)
     # approved = models.BooleanField(default=False)
 
