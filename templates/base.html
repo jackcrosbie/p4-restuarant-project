@@ -66,7 +66,7 @@
                 <div class="col-md-8 offset-md-2">
                     {% for message in messages %}
 
-                    <div class="alert {{ message.tags }} alert-dimissible fade show" id="msg" role="alert">
+                    <div class="alert {{ message.tags }} alert-dismissible alert-success fade show" role="alert">
                         {{ message | safe }}
                         <button type="button" class="btn-close" data-bs-dimiss="alert" aria-label="Close"></button>
                     </div>

@@ -1,6 +1,6 @@
 from .models import Reservations
 from django import forms
-from .widgets import DatePickerInput, TimePickerInput
+from .widgets import DatePickerInput
 
 
 class ReservationForm(forms.ModelForm):
