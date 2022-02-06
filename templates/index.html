@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
 
 <div class="container-fluid">
@@ -19,7 +21,8 @@
             </p>
         </div>
         <div class="col-4">
-            *image here*
+            <img src="{% static 'images/southern-ireland.jpg' %}" class="img-thumbnail"
+                            alt="south of Ireland.">
         </div>
         <div class="col-8 p-5 mt-3">
             <p> Our strive for excellent continues and we encourage honest and open feedback from all our customers.<br>
