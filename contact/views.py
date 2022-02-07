@@ -12,5 +12,4 @@ class ContactUsFormView(CreateView):
 
     def form_valid(self, form):
         
-        # this is what the method needs to run as expected when called, otherwise it's missing info it needs
         return super().form_valid(form)
