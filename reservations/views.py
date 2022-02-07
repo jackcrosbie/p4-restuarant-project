@@ -1,4 +1,6 @@
 from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic import TemplateView
+from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
@@ -9,29 +11,30 @@ from .forms import ReservationForm
 # Create your views here.
 class ReservationsFormView(CreateView):
     model = Reservations
-    template_name = "reservations.html"
+    template_name = "reservations/reservations.html"
     form_class = ReservationForm
-    success_url = '/reservations'
+    success_url = "reservation_complete/"
     
 
 
     def form_valid(self, form):
-        
-        # this is what the method needs to run as expected when called, otherwise it's missing info it needs
         return super().form_valid(form)
 
 
-class ReservationUpdateView(UpdateView):
+class EditReservationView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Reservations
-    fields = [
-        'name', 'phone_number', 'email', 'date', 'time', 'number_of_party'
-    ]
-    success_url = "reservations/"
+    template_name = "edit_reservations.html"
+    form_class = ReservationForm
+    success_url = "/reservation_complete/"
+
+    def test_func(self):
+        return self.request.user == self.get_object().user
     
 
-#class EditReservation():
-#     def get(self, request, reservation_id, *args, **kwargs):
-#        if request.user.is_authenticated:
-#            # Get reservation object based on id
-#            reservation = get_object_or_404(
-#                Reservation, reservation_id=reservation_id)
+class ReservationCompleteView(CreateView):
+    template_name = "reservation_complete.html"
+    success_url = "/reservation_complete/"
+
+
+class ReservationAccountView(TemplateView):
+    template_name = "reservations/reservations_account.html"
