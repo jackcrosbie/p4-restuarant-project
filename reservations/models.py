@@ -26,11 +26,25 @@ class Reservations(models.Model):
     date = models.DateField()
     time = models.CharField(choices=time_options, default="12pm", max_length=10)
     number_of_party = models.IntegerField(choices=party_size, default=1)
+    # reservation_id = models.AutoField(primary_key=True)
     # approved = models.BooleanField(default=False)
-
 
     class Meta:
         ordering = ['date']
         verbose_name = 'Reservation'
         verbose_name_plural = 'Reservations'
 
+    def __str__(self):
+        return self.name
+
+
+#class Users(models.Model):
+#    user_id = models.AutoField(primary_key=True)
+#
+#    class Meta:
+#        ordering = ['user_id']
+#        verbose_name = 'User'
+#        verbose_name_plural = 'Users'
+#
+#    def __str__(self):
+#        return self.name
