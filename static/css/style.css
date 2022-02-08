@@ -3,6 +3,7 @@
 body {
     margin: 0;
     font-family: 'Roboto Slab', Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #FFEEDB;
 }
 
 form, table{
@@ -24,3 +25,19 @@ h2 {
 }
 
 /* CSS for menu images */
+
+#navbar-color {
+    background-color: #020202;
+    color: #FFEEDB;
+    text-decoration: none;
+}
+
+#navbar-color2 {
+    background-color: #0D324D;
+    color: #FFEEDB;
+    text-decoration: none;
+}
+
+#sticky-footer {
+    background-color: #0D324D;
+}

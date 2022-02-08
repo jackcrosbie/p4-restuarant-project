@@ -16,16 +16,16 @@
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <h1 class="text-left bg-dark font-weight-bold text-white container-fluid">Jack's Bistro</h1>
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar-color">
+        <h1 class="text-left font-weight-bold text-white container-fluid">Jack's Bistro</h1>
         <div class="container-fluid">
             <a class="navbar-brand" href="/"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto mb-lg-0">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'reservations_account' %}">Account</a>
@@ -46,8 +46,8 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <ul class="navbar-nav mr-auto">
+        <nav class="navbar navbar-expand-lg justify-content-center" id="navbar-color2">
+            <ul class="navbar-nav mr-auto text-white">
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'index' %}">Home</a>
                 </li>
@@ -85,7 +85,7 @@
 
         {% endblock %}
     </p>
-    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 text-white-50">
         <div class="container text-center">
             <small>Copyright &copy; Jack's Bistro</small>
         </div>

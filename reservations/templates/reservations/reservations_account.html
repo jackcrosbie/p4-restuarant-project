@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
 
 <div class="container mb-3">
@@ -10,15 +12,23 @@
 <ul>
     <!-- Iterate over reservations list -->
     {% for reservation in reservations %}
-    <!-- Display Objects -->
-    <li>{{ reservation.name }}</li>
-    <li>{{ reservation.phone_number }}</li>
-    <li>{{ reservation.email }}</li>
-    <li>{{ reservation.date }}</li>
-    <li>{{ reservation.time }}</li>
-    <li>{{ reservation.number_of_party }}</li>
 
-    <hr/>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{% static 'images/restuarant.jpg' %}" alt="Card restuarant image">
+        <div class="card-body">
+            <ul>
+                <li>{{ reservation.name | capfirst }}</li>
+                <li>{{ reservation.phone_number }}</li>
+                <li>{{ reservation.email }}</li>
+                <li>{{ reservation.date }}</li>
+                <li>{{ reservation.time }}</li>
+                <li>{{ reservation.number_of_party }}</li>
+            </ul>
+        </div>
+    </div>
+    <a href="{% url 'edit_reservation' %}" type="button" class="btn btn-dark">Edit</a>
+    <a href="{% url 'delete_reservation' %}" type="button" class="btn btn-dark">Delete</a>
+    <hr />
     <!-- If object_list is empty  -->
     {% empty %}
     <li>No Reservation have been made</li>
