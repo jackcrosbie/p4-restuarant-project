@@ -1,5 +1,5 @@
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.contrib import messages
 from django.http import HttpResponse
@@ -22,13 +22,10 @@ class ReservationsFormView(CreateView):
 
 
 class EditReservationView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    model = Reservations
-    template_name = "reservations/edit_reservations.html"
-    form_class = ReservationForm
-    success_url = "reservation_complete/"
-
-    def test_func(self):
-        return self.request.user == self.get_object().user
+    def get(self, request, *args, **kwargs):
+        reservation = Reservations.objects.get(uuid=kwargs['uuid'])
+        form = EditReservationForm(initial={"name": reservation.name, "email": reservation.email, })
+        return render(request, "reservation/edit-reservation.html", {"form": form})
     
 
 class ReservationCompleteView(CreateView):
@@ -37,6 +34,10 @@ class ReservationCompleteView(CreateView):
     form_class = ReservationForm
     model = Reservations
 
+
+class RetrieveReservationView(ListView):
+    model = ReservationForm
+    template_name = "reservations/reservations_account"
 
 class ReservationAccountView(TemplateView):
     template_name = "reservations/reservations_account.html"

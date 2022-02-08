@@ -6,7 +6,25 @@
     <h2 class="d-flex justify-content-center">Edit or delete your reservation!</h1>
 </div>
 
-<div class="mx-auto form-group mt-2">
+
+<ul>
+    <!-- Iterate over reservations list -->
+    {% for reservations in object_list %}
+    <!-- Display Objects -->
+    <li>{{ reservation.name }}</li>
+    <li>{{ reservation.phone_number }}</li>
+    <li>{{ reservation.email }}</li>
+    <li>{{ reservation.date }}</li>
+    <li>{{ reservation.time }}</li>
+    <li>{{ reservation.number_of_party }}</li>
+ 
+    <hr/>
+    <!-- If object_list is empty  -->
+    {% empty %}
+    <li>No Reservation have been made</li>
+    {% endfor %}
+</ul>
+<!-- div class="mx-auto form-group mt-2">
 
     <form action="{% url 'reservations' %}" method="post">
         {% csrf_token %}
@@ -14,9 +32,11 @@
             {{ form.as_table }}
         </table>
         <div class="mt-3 d-flex justify-content-center">
-            <button class="btn btn-dark" type="submit" value="Submit">Submit</button>
+            <button class="btn btn-dark" type="button" value="Edit">Edit</button>
+        </div>
+        <div class="mt-3 d-flex justify-content-center">
+            <button class="btn btn-dark" type="button" value="Delete">Delete</button>
         </div>
     </form>
 </div>
-
-{% endblock %}
+{% endblock %} -->
