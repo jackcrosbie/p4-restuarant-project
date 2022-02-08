@@ -9,7 +9,7 @@
 
 <ul>
     <!-- Iterate over reservations list -->
-    {% for reservations in object_list %}
+    {% for reservation in reservations %}
     <!-- Display Objects -->
     <li>{{ reservation.name }}</li>
     <li>{{ reservation.phone_number }}</li>
@@ -17,7 +17,7 @@
     <li>{{ reservation.date }}</li>
     <li>{{ reservation.time }}</li>
     <li>{{ reservation.number_of_party }}</li>
- 
+
     <hr/>
     <!-- If object_list is empty  -->
     {% empty %}

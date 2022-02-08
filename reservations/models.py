@@ -1,6 +1,7 @@
 """ django Imports """
 from django.db import models
 from django.core.validators import RegexValidator
+from django.contrib.auth.models import User
 import uuid
 
 
@@ -22,6 +23,7 @@ phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$")
 class Reservations(models.Model):
 
     """ reservation form categories and attributes """
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     phone_number = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True)
     email = models.EmailField()
