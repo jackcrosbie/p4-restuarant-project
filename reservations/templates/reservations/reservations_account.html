@@ -26,8 +26,8 @@
             </ul>
         </div>
     </div>
-    <a href="{% url 'edit_reservation' %}" type="button" class="btn btn-dark">Edit</a>
-    <a href="{% url 'delete_reservation' %}" type="button" class="btn btn-dark">Delete</a>
+    <a href="{% url 'edit_reservation' user.id %}" type="button" class="btn btn-dark">Edit</a>
+    <a href="{% url 'delete_reservation' user.id %}" type="button" class="btn btn-dark">Delete</a>
     <hr />
     <!-- If object_list is empty  -->
     {% empty %}
