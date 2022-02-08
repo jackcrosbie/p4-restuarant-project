@@ -1,4 +1,4 @@
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.contrib import messages
@@ -25,7 +25,7 @@ class EditReservationView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Reservations
     template_name = "reservations/edit_reservations.html"
     form_class = ReservationForm
-    success_url = "/reservation_complete/"
+    success_url = "reservation_complete/"
 
     def test_func(self):
         return self.request.user == self.get_object().user
@@ -33,10 +33,19 @@ class EditReservationView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class ReservationCompleteView(CreateView):
     template_name = "reservations/reservation_complete.html"
-    success_url = "/reservation_complete/"
+    success_url = "reservation_complete/"
     form_class = ReservationForm
     model = Reservations
 
 
 class ReservationAccountView(TemplateView):
     template_name = "reservations/reservations_account.html"
+
+
+class DeleteReservationView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """ A view to delete an reservation """
+    model = Reservations
+    success_url = "/reservations/"
+
+    def test_func(self):
+        return self.request.user == self.get_object().user

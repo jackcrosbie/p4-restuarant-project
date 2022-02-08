@@ -6,7 +6,7 @@ from .forms import MenuForm
 # Create your views here.
 class MenuFormView(CreateView):
     model = Menu()
-    template_name = 'menu.html'
+    template_name = 'menu/menu.html'
     form_class = MenuForm
     
     def form_valid(self, form):
