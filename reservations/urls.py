@@ -7,6 +7,6 @@ from .views import ReservationsFormView, EditReservationView, ReservationComplet
 urlpatterns = [
     path('', views.ReservationsFormView.as_view(), name='reservations'),
     path('edit/<slug:pk>/', EditReservationView.as_view(), name="edit_reservation"),
-    path('complete/<slug:pk>/', ReservationCompleteView.as_view(), name="reservation_complete"),
+    path('reservation_complete/', ReservationCompleteView.as_view(), name="reservation_complete"),
     path('reservations_account/', ReservationAccountView.as_view(), name="reservations_account"),
 ]

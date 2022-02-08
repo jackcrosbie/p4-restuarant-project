@@ -23,7 +23,7 @@ class ReservationsFormView(CreateView):
 
 class EditReservationView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Reservations
-    template_name = "edit_reservations.html"
+    template_name = "reservations/edit_reservations.html"
     form_class = ReservationForm
     success_url = "/reservation_complete/"
 
@@ -32,8 +32,10 @@ class EditReservationView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     
 
 class ReservationCompleteView(CreateView):
-    template_name = "reservation_complete.html"
+    template_name = "reservations/reservation_complete.html"
     success_url = "/reservation_complete/"
+    form_class = ReservationForm
+    model = Reservations
 
 
 class ReservationAccountView(TemplateView):
