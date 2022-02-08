@@ -1,7 +1,7 @@
 """ django Imports """
 from django.db import models
 from django.core.validators import RegexValidator
-import uuid
+
 
 time_options = (
     ("12:00", "12pm"),
@@ -27,7 +27,7 @@ class Reservations(models.Model):
     date = models.DateField()
     time = models.CharField(choices=time_options, default="12pm", max_length=10)
     number_of_party = models.IntegerField(choices=party_size, default=1)
-    reservation_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, max_length=15)
+    
     # approved = models.BooleanField(default=False)
 
     class Meta:
@@ -37,15 +37,3 @@ class Reservations(models.Model):
 
     def __str__(self):
         return self.name
-
-
-#class Users(models.Model):
-#    user_id = models.AutoField(primary_key=True)
-#
-#    class Meta:
-#        ordering = ['user_id']
-#        verbose_name = 'User'
-#        verbose_name_plural = 'Users'
-#
-#    def __str__(self):
-#        return self.name

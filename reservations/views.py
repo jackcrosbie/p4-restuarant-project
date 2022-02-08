@@ -33,14 +33,13 @@ class EditReservationView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class ReservationCompleteView(CreateView):
     template_name = "reservations/reservation_complete.html"
-    success_url = "reservation_complete/"
+    success_url = "/reservation_complete/"
     form_class = ReservationForm
     model = Reservations
 
 
 class ReservationAccountView(TemplateView):
     template_name = "reservations/reservations_account.html"
-
 
 class DeleteReservationView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """ A view to delete an reservation """
