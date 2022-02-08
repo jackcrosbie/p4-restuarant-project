@@ -31,7 +31,12 @@
     <hr />
     <!-- If object_list is empty  -->
     {% empty %}
-    <li>No Reservation have been made</li>
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="row mt-5 card bg-dark text-white">
+            <p id="p-big-text">No Reservation have been made<br> To make a <strong>Reservation</strong> click <a
+                    href="{% url 'reservations' %}">Here!</a></p>
+        </div>
+    </div>
     {% endfor %}
 </ul>
 <!-- div class="mx-auto form-group mt-2">
