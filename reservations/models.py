@@ -23,15 +23,16 @@ phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$")
 class Reservations(models.Model):
 
     """ reservation form categories and attributes """
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, unique=True)
     name = models.CharField(max_length=50)
     phone_number = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True)
     email = models.EmailField()
     date = models.DateField()
     time = models.CharField(choices=time_options, default="12pm", max_length=10)
     number_of_party = models.IntegerField(choices=party_size, default=1)
-    reservation_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, max_length=15)
-    # approved = models.BooleanField(default=False)
+    reservation_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    
+    
 
     class Meta:
         ordering = ['date']

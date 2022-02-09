@@ -6,12 +6,13 @@ body {
     background-color: #FFEEDB;
 }
 
-form, table{
-    padding: 10px;
-}
 
-h1 {
-    font-size: 3em;
+/* ---------------------- css for site logo: Jack's Bistro */
+
+#logo {
+    font-size: 4em;
+    color: #FFEEDB;
+    text-shadow: .1em .1em 0 hsl(200 50% 30%);
 }
 
 h2 {
@@ -29,7 +30,15 @@ h2 {
     border-radius: 2px;
 }
 
-/* CSS for menu images */
+/* ---------------------- css for navbars */
+
+nav, ul, li {
+    font-size: 1.1em;
+}
+
+#nav-1 {
+    color: #FFEEDB;
+}
 
 #navbar-color {
     background-color: #020202;
@@ -42,6 +51,8 @@ h2 {
     color: #FFEEDB;
     text-decoration: none;
 }
+
+/* ---------------------- css for footer */ 
 
 #sticky-footer {
     background-color: #0D324D;

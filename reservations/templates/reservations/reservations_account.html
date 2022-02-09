@@ -26,10 +26,11 @@
             </ul>
         </div>
     </div>
-    <a href="{% url 'edit_reservation' user.id %}" type="button" class="btn btn-dark">Edit</a>
-    <a href="{% url 'delete_reservation' user.id %}" type="button" class="btn btn-dark">Delete</a>
-    <hr />
-    <!-- If object_list is empty  -->
+    
+    <button href="#" type="button" class="btn btn-dark">Edit</a> 
+    <button href="#" type="button" class="btn btn-dark">Delete</a>
+    
+    <!-- If they haven't made a reservation  -->
     {% empty %}
     <div class="container-fluid d-flex justify-content-center">
         <div class="row mt-5 card bg-dark text-white">
@@ -39,19 +40,5 @@
     </div>
     {% endfor %}
 </ul>
-<!-- div class="mx-auto form-group mt-2">
 
-    <form action="{% url 'reservations' %}" method="post">
-        {% csrf_token %}
-        <table>
-            {{ form.as_table }}
-        </table>
-        <div class="mt-3 d-flex justify-content-center">
-            <button class="btn btn-dark" type="button" value="Edit">Edit</button>
-        </div>
-        <div class="mt-3 d-flex justify-content-center">
-            <button class="btn btn-dark" type="button" value="Delete">Delete</button>
-        </div>
-    </form>
-</div>
 {% endblock %} -->
