@@ -19,7 +19,7 @@ Within the website will be a reservations/booking system, a section to view and 
 
 ### Demo
 
-Live link will be deployed here !!!
+https://jacksbistro.herokuapp.com/ - Live link to website!
 
 ## UX
 
