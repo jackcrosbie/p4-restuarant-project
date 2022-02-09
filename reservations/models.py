@@ -1,8 +1,8 @@
 """ django Imports """
+import uuid
 from django.db import models
 from django.core.validators import RegexValidator
 from django.contrib.auth.models import User
-import uuid
 
 
 time_options = (
@@ -25,20 +25,21 @@ class Reservations(models.Model):
     """ reservation form categories and attributes """
     user = models.OneToOneField(User, on_delete=models.CASCADE, unique=True)
     name = models.CharField(max_length=50)
-    phone_number = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True)
+    phone_number = models.CharField(
+        validators=[phoneNumberRegex], max_length=16, unique=True)
     email = models.EmailField()
     date = models.DateField()
-    time = models.CharField(choices=time_options, default="12pm", max_length=10)
+    time = models.CharField(
+        choices=time_options, default="12pm", max_length=10)
     number_of_party = models.IntegerField(choices=party_size, default=1)
-    reservation_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    
-    
+    reservation_id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False)
 
     class Meta:
+        """ meta class for admin panel """
         ordering = ['date']
         verbose_name = 'Reservation'
         verbose_name_plural = 'Reservations'
 
     def __str__(self):
-
         return self.name
