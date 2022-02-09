@@ -122,6 +122,42 @@ The black background on the first top container, which holds the logo and first 
 
 ## Technologies
 
+The following is a list of the various technologies I used along with what they were used for:
+
+- Django
+Django is the framework that has been used to build the over project and its apps.
+- Python
+Python is the core programming language used to write all of the code in this application to make it fully functional.
+- Bootstrap
+Used for creating responsive design.
+- Google Fonts
+Used to obtain the fonts linked in the header, fonts used were Raleway and Lobster
+- Font Awesome
+Used to obtain the icons used on the high scores and rules pages.
+- Google Developer Tools
+Used as a primary method of fixing spacing issues, finding bugs, and testing responsiveness across the project.
+- GitHub
+Used to store code for the project after being pushed.
+- Git
+Used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
+- Gitpod
+Used as the development environment.
+- Heroku
+Used to deploy my application..
+- Pep8
+Used to test my code for any issues or errors.
+- Unicorn Revealer
+Used to detect overflow of elements, which allowed me to quickly debug any issues.
+- Coloors
+Used to create a colour palette for the design.
+- Cloudinary
+Used to store all of my static files and images.
+- W3C Markup Validation Service
+Used to validate all HTML code written and used in this webpage.
+- W3C CSS Validation Service
+Used to validate all CSS code written and used in this webpage.
+- PostgreSQL
+I have used Heroku's PostgreSQL relational database in deployment to store the data for my models.
 
 ## Features
 
@@ -131,7 +167,7 @@ _As a User I want to be able to request a booking so that i can easily book a ta
 
 As stated above, one of the primary functions of Jack's Bistro website will be to allow user/customers to request a booking. The information from this bookings would be stored in a database, in our case using PostgresSQL. The user will be required to enter their name, email, number in party, date required and time desired.
 
-![reservation form]()
+![reservation form](https://github.com/jackcrosbie/p4-restuarant-project/blob/main/assets/documents/images/reservation-form.png?raw=true)
 
 _As a Site Admin I want to be able to approve or reject bookings so that i can control capacity for the restuarant_
 
@@ -155,7 +191,8 @@ _As a User I want to see messages when logging in and logging out so that i can 
 
 When user are logging in and logging out it is beneficial for them to see a message stating the action has occured. Again this is a safety issue and just confirms the action was undertaken so the user can navigate away from the website knowing they have been logged out. This helps prevents users staying logged in if an error occurs as the user will be alerted.
 
-![log out message]()
+![log out message](![image](https://user-images.githubusercontent.com/82109134/153181129-d5669f06-8c1a-42f6-807a-197b197115fa.png)
+)
 
 Using Bootstrap I added messages so the user could see if he or she logged out or in. These messages show the users if they logged out successfuly or not. 
 
@@ -163,18 +200,30 @@ _As a User I want to be able to login and logout so that i can keep my informati
 
 If a user is registered they need the ability to login and logout of the website. This is a safety issue and stops someone else being able to use their account or access their information, if they were continually logged in. The login and logout ability was created through Django.
 
-![login]()
+![login](https://github.com/jackcrosbie/p4-restuarant-project/blob/main/assets/documents/images/login.png?raw=true)
 
 _As a User I want to be able to register so that i can save my information for future bookings_
 
-A user will be able to register 
+A user will be able to register through the register button on the site. Once they fill out the register form they will then be about to log in and log out in future. Authenication is provided by django AllAuth which keeps users and their information safe and secure
+
+![registration form](https://github.com/jackcrosbie/p4-restuarant-project/blob/main/assets/documents/images/registration-form.png?raw=true)
 
 _As a User I want to be able to edit my bookings so that i can make a correction or change if needed_
+
+Once a user has registered and is logged in the account section of the website will become available. If a user navigated to the account page they will see any resevations that have displayed in a bootstrap image card. Pictured here:
+
+![edit reservation](![image](https://user-images.githubusercontent.com/82109134/153183280-3c54d8b8-e2df-42eb-915c-904112fc44a5.png)
+
+Below the cards will be a button to either delete or edit a booking. This completes the CRUD functionality for the reservations on my website. Users are able to Create, Retrieve, Updated and Delete reservations they have made once they are registered and logged in.
 
 _As a User I want a stylish looking website so that i can navigate it easily_
 
 By providing a well designed and easily navigated website it improves the user satisfaction while using the website and also increases the likelyhood of them revisiting it.
 As Jack's Bistro, from a user point of views, primary use would be making a reservation, seeing what was on the updated menu and making contact, if required, it meant a more simple website design was best suited, in my opinion. To make a well laid out website which was easily navigational I used general CSS styling and also Bootstrap for a more solid design.
+
+The website is broken down into the main componenets and each one of these has it's own page. They are all clearly marked and easily navigational to through the navbars.
+Every step is clearly marked and the styles are uniform through, like all the buttons are styled the same using bootstrap for a sense of familiarity throughout for the user.
+Through my choice of colours, images, use of bootstrap, HTML and CSS i feel the website i have created is both easy to navigate as well as stylish.
 
 **Features Left To Implement**
 
