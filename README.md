@@ -95,6 +95,12 @@ User who are registered and logged in will have the ability to edit or delete th
 
 #### Contact Us
 
+Contact App also utilises a form with various fields for the user to get in touch with the restuarant. This is more if they have special booking requests, want to find out more information or want to give some feedback. The user does not need to be signed in to use this feature.
+
+#### Menu
+
+The menu app has one model in this and it contains four images which are the menu. This can easily be changed by uploading pictures of the new menu making it easy and efficient for the admin.
+
 ### Skeleton
 
 [Wireframes for this project](assets/documents/p4-wireframes.pdf)
@@ -112,6 +118,8 @@ I chose the colours in the above palette as I felt they had nice contrast to eac
 The antique white was much softer as an overall background then just white and also means the field boxes for the form stand out a little more.
 The black background on the first top container, which holds the logo and first navbar, makes the antique white text stand out nicely so it's easily read. 
 
+![coolors image](https://github.com/jackcrosbie/p4-restuarant-project/blob/main/assets/documents/images/p4-colors.png?raw=true)
+
 ## Technologies
 
 
@@ -122,6 +130,8 @@ The black background on the first top container, which holds the logo and first 
 _As a User I want to be able to request a booking so that i can easily book a table_
 
 As stated above, one of the primary functions of Jack's Bistro website will be to allow user/customers to request a booking. The information from this bookings would be stored in a database, in our case using PostgresSQL. The user will be required to enter their name, email, number in party, date required and time desired.
+
+![reservation form]()
 
 _As a Site Admin I want to be able to approve or reject bookings so that i can control capacity for the restuarant_
 
@@ -135,13 +145,25 @@ _As a User I want to be able to easily navigate the site so that i can easily vi
 
 A well designed and thoughtout website should allow the user to navigate through it effectively. They should be able to move to the content they wish to view intuitively and quickly. The main approach to solve this was to put in a navigation bar at the top of the page. The links provided (Home, Reservations, Menu, Contact Us) allow the user go to the page they need with one click of a mouse. I used general HTML and CSS styling in conjunction with Bootstrap to create a fully functioning navigational bar at the top of everypage of the website. In the mobile version of the website the navigation bar is a Hamburger stlye menu achieved through Bootstrap.
 
+![navbar-1](https://github.com/jackcrosbie/p4-restuarant-project/blob/main/assets/documents/images/navbar-1.png?raw=true)
+
+![navbar-2](https://user-images.githubusercontent.com/82109134/153136781-2d5cb2fc-3a63-46b5-80ad-2da21588c896.png)
+
+AS shown in the pictures above I opted to use two navbars for this project. Navbar one sat at the top of the page and dealt with all the AllAuth authorisation. If the user is logged in the navbar shows account and logout. If the user it not logged in it shows Register and Login. The second navbar I used was for each page on the site. Even though I could have put all the links on one navbar I thought the use of two was better as it gave each more space and was less information all in once place.
+
 _As a User I want to see messages when logging in and logging out so that i can be sure the action was undertaken_
 
 When user are logging in and logging out it is beneficial for them to see a message stating the action has occured. Again this is a safety issue and just confirms the action was undertaken so the user can navigate away from the website knowing they have been logged out. This helps prevents users staying logged in if an error occurs as the user will be alerted.
 
+![log out message]()
+
+Using Bootstrap I added messages so the user could see if he or she logged out or in. These messages show the users if they logged out successfuly or not. 
+
 _As a User I want to be able to login and logout so that i can keep my information safe_
 
 If a user is registered they need the ability to login and logout of the website. This is a safety issue and stops someone else being able to use their account or access their information, if they were continually logged in. The login and logout ability was created through Django.
+
+![login]()
 
 _As a User I want to be able to register so that i can save my information for future bookings_
 
