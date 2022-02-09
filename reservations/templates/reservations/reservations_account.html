@@ -27,8 +27,8 @@
         </div>
     </div>
     
-    <a href="{% url 'edit_reservation' reservation.id %}" type="button"  class="btn btn-dark">Edit</a> 
-    <a href="#" type="button" class="btn btn-dark">Delete</a>
+    <a href="{% url 'edit_reservation' reservation.pk %}" type="button"  class="btn btn-dark">Edit</a> 
+    <a href="{% url 'delete_reservation' reservation.pk %}" type="button" class="btn btn-dark">Delete</a>
     
     <!-- If they haven't made a reservation  -->
     {% empty %}

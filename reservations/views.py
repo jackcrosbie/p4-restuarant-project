@@ -54,7 +54,7 @@ class ReservationAccountView(ListView):
 class DeleteReservationView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """ A view to allow a user to delete a reservation """
     model = Reservations
-    success_url = "/reservations_account/"
+    success_url = "/reservations/"
 
     def test_func(self):
         return self.request.user == self.get_object().user

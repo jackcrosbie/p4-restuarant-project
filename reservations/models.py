@@ -26,7 +26,7 @@ class Reservations(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, unique=True)
     name = models.CharField(max_length=50)
     phone_number = models.CharField(
-        validators=[phoneNumberRegex], max_length=16, unique=True)
+        validators=[phoneNumberRegex], max_length=16, unique=False)
     email = models.EmailField()
     date = models.DateField()
     time = models.CharField(
