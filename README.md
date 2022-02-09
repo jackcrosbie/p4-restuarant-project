@@ -124,39 +124,39 @@ The black background on the first top container, which holds the logo and first 
 
 The following is a list of the various technologies I used along with what they were used for:
 
-- Django
+- Django:
 Django is the framework that has been used to build the over project and its apps.
-- Python
+- Python:
 Python is the core programming language used to write all of the code in this application to make it fully functional.
-- Bootstrap
+- Bootstrap:
 Used for creating responsive design.
-- Google Fonts
+- Google Fonts:
 Used to obtain the fonts linked in the header, fonts used were Raleway and Lobster
-- Font Awesome
+- Font Awesome:
 Used to obtain the icons used on the high scores and rules pages.
-- Google Developer Tools
+- Google Developer Tools:
 Used as a primary method of fixing spacing issues, finding bugs, and testing responsiveness across the project.
-- GitHub
+- GitHub:
 Used to store code for the project after being pushed.
-- Git
+- Git:
 Used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
-- Gitpod
+- Gitpod:
 Used as the development environment.
-- Heroku
+- Heroku:
 Used to deploy my application..
-- Pep8
+- Pep8:
 Used to test my code for any issues or errors.
-- Unicorn Revealer
+- Unicorn Revealer:
 Used to detect overflow of elements, which allowed me to quickly debug any issues.
-- Coloors
+- Coloors:
 Used to create a colour palette for the design.
-- Cloudinary
+- Cloudinary:
 Used to store all of my static files and images.
-- W3C Markup Validation Service
+- W3C Markup Validation Service:
 Used to validate all HTML code written and used in this webpage.
-- W3C CSS Validation Service
+- W3C CSS Validation Service:
 Used to validate all CSS code written and used in this webpage.
-- PostgreSQL
+- PostgreSQL:
 I have used Heroku's PostgreSQL relational database in deployment to store the data for my models.
 
 ## Features
