@@ -59,10 +59,58 @@ From an Admin point of view the website would mean less work when it came throug
 
 ### Scope
 
+Based on my user stories these are the features I felt needed implementing:
+
+- Homepage with information about who we are, what we do and where we are.
+- A navigation bar to take you to the pages on the site
+- Registration page so that customers could register
+- Reservations page so users could make a reservation
+- Login and Logout, powered by Django AllAuth, so user could safely log in and out.
+- Contact Us page, with form, so customers with special requests could get in touch 
+- Edit/Delete reservations page so registered users could manage their reservations
+
 ### Structure
+
+Due to the nature of the website I felt keeping things simple was essential to it's use. Everything is clearly labeled and easily navigational so the user can get to what they need easily.
+All the major aspects of the website have their own page:
+- Homepage for basic information
+- Reservations page for making reservations
+- Menu page to view the current menu the restuarant has to offer
+- Contact Us page to easily get in touch for extra information or special requests
+- Account page for people to manage their reservations by either editing or deleting them.
+
+### Databases
+
+The two apps I use that require databases are the Reservations App and the Contact App.
+
+Both these apps have models in them to create a form by which user can make reservations or get in contact.
+Each app has a model to create a form and extra variables such as time_options and others.
+
+#### Reservations
+
+This app requires the user to fill field within the form and each field has specific parameters for entering data, such as phone_number requires integers and can't have letters.
+This feature can be used by either users who are register and logged in and those that aren't registered. I felt users shouldn't have to register to make a reservation. The information from the form is then sent to the database which can then me managed by the admin on the backend.
+
+User who are registered and logged in will have the ability to edit or delete their bookings through their account page.
+
+#### Contact Us
+
+### Skeleton
+
+[Wireframes for this project](assets/documents/p4-wireframes.pdf)
+
+My wireframes were created using Balsamiq and represent the simplicity I was going for.
+
+Using bootstrap I tried to give everything uniform and similar so the user would feel comfortable navigating around the site.
+I tried to keep as close to my wireframes as possible when creating the various pages.
 
 ### Surface
 
+(Coolors picture of palette)
+
+I chose the colours in the above palette as I felt they had nice contrast to each other as well as blending together nicely for the overall look.
+The antique white was much softer as an overall background then just white and also means the field boxes for the form stand out a little more.
+The black background on the first top container, which holds the logo and first navbar, makes the antique white text stand out nicely so it's easily read. 
 
 ## Technologies
 
@@ -83,33 +131,30 @@ _As a Site Admin I want to delete and manage bookings so that i can maintain the
 
 Due to the nature of the website/product cancellations will occur. Either due to illness or unforeseen circumstances customers will have to cancel or rearrange bookings. This means the site admin will need to have the ability to cancel or change bookings on the system. This keeps everything tidy and more easily managed. This function will be created through a combination of PostgreSQL and Django.
 
+_As a User I want to be able to easily navigate the site so that i can easily view all the content_
 
-**Features Left To Implement**
+A well designed and thoughtout website should allow the user to navigate through it effectively. They should be able to move to the content they wish to view intuitively and quickly. The main approach to solve this was to put in a navigation bar at the top of the page. The links provided (Home, Reservations, Menu, Contact Us) allow the user go to the page they need with one click of a mouse. I used general HTML and CSS styling in conjunction with Bootstrap to create a fully functioning navigational bar at the top of everypage of the website. In the mobile version of the website the navigation bar is a Hamburger stlye menu achieved through Bootstrap.
+
+_As a User I want to see messages when logging in and logging out so that i can be sure the action was undertaken_
+
+When user are logging in and logging out it is beneficial for them to see a message stating the action has occured. Again this is a safety issue and just confirms the action was undertaken so the user can navigate away from the website knowing they have been logged out. This helps prevents users staying logged in if an error occurs as the user will be alerted.
+
+_As a User I want to be able to login and logout so that i can keep my information safe_
+
+If a user is registered they need the ability to login and logout of the website. This is a safety issue and stops someone else being able to use their account or access their information, if they were continually logged in. The login and logout ability was created through Django.
+
+_As a User I want to be able to register so that i can save my information for future bookings_
+
+A user will be able to register 
+
+_As a User I want to be able to edit my bookings so that i can make a correction or change if needed_
 
 _As a User I want a stylish looking website so that i can navigate it easily_
 
 By providing a well designed and easily navigated website it improves the user satisfaction while using the website and also increases the likelyhood of them revisiting it.
 As Jack's Bistro, from a user point of views, primary use would be making a reservation, seeing what was on the updated menu and making contact, if required, it meant a more simple website design was best suited, in my opinion. To make a well laid out website which was easily navigational I used general CSS styling and also Bootstrap for a more solid design.
 
-_As a User I want to be able to easily navigate the site so that i can easily view all the content_
-
-A well designed and thoughtout website should allow the user to navigate through it effectively. They should be able to move to the content they wish to view intuitively and quickly. The main approach to solve this was to put in a navigation bar at the top of the page. The links provided (Home, Reservations, Menu, Contact Us) allow the user go to the page they need with one click of a mouse. I used general HTML and CSS styling in conjunction with Bootstrap to create a fully functioning navigational bar at the top of everypage of the website. In the mobile version of the website the navigation bar is a Hamburger stlye menu achieved through Bootstrap.
-
-
-_As a User I want to be able to edit my bookings so that i can make a correction or change if needed_
-
-
-_As a User I want to be able to register so that i can save my information for future bookings_
-
-A user will be able to register 
-
-_As a User I want to be able to login and logout so that i can keep my information safe_
-
-If a user is registered they need the ability to login and logout of the website. This is a safety issue and stops someone else being able to use their account or access their information, if they were continually logged in. The login and logout ability was created through Django.
-
-_As a User I want to see messages when logging in and logging out so that i can be sure the action was undertaken_
-
-When user are logging in and logging out it is beneficial for them to see a message stating the action has occured. Again this is a safety issue and just confirms the action was undertaken so the user can navigate away from the website knowing they have been logged out. This helps prevents users staying logged in if an error occurs as the user will be alerted.
+**Features Left To Implement**
 
 _As a User I want forms to autocomplete if logged in so that i can save time when making bookings_
 
@@ -136,8 +181,51 @@ The ability to be able to check the availability or number of tables left for a 
 
 ## Deployment
 
+The master branch of this repository has been used for the deployed version of this application.
+
+Using Github & Gitpod
+To deploy my command-line interface application, I had to use the Code Institute Python Essentials Template, as this enables the application to be properly viewed on Heroku using a mock terminal.
+
+- Click the Use This Template button.  
+-  Add a repository name and brief description.
+-  Click the Create Repository from Template to create your repository.
+-  To create a Gitpod workspace you then need to click Gitpod, this can take a few minutes.
+-  When you want to work on the project it is best to open the workspace from Gitpod (rather than Github) as this will open your previous workspace rather than creating a new one. You should pin the workspace so that it isn't deleted.
+-  Committing your work should be done often and should have clear/explanatory messages, use the following commands to make your commits:
+   -  git add .: adds all modified files to a staging area
+   -  git commit -m "A message explaining your commit": commits all changes to a local repository.
+   -  git push: pushes all your committed changes to your Github repository.
+
+### Creating an Application with Heroku
+
+I followed the below steps using the Code Institute tutorial:
+
+- The following command in the Gitpod CLI will create the relevant files needed for Heroku to install your project dependencies pip3 freeze --local > requirements.txt. Please note this file should be added to a .gitignore file to prevent the file from being committed.
+1. Go to Heroku.com and log in; if you do not already have an account then you will need to create one.
+2. Click the New dropdown and select Create New App.
+3. Enter a name for your new project, all Heroku apps need to have a unique name, you will be prompted if you need to change it.
+4. Select the region you are working in.
+
+Heroku Settings You will need to set your Environment Variables - this is a key step to ensuring your application is deployed properly.
+
+- In the Settings tab, click on Reveal Config Vars and set the following variables:
+  - If using credentials you will need to add the credentials as a variable, the key is the name 'CREDS' and the value is the contents of your creds JSON
+  - Add key: PORT & value 8000
+- Buildpacks are also required for proper deployment, simply click Add buildpack and search for the ones that you require.
+  - For this project, I needed to add Python and Node.js, in this order.
+
+Heroku Deployment In the Deploy tab:
+
+- Connect your Heroku account to your Github Repository following these steps:
+  - Click on the Deploy tab and choose Github-Connect to Github.
+  - Enter the GitHub repository name and click on Search.
+  - Choose the correct repository for your application and click on Connect.
+- You can then choose to deploy the project manually or automatically, automatic deployment will generate a new application every time you push a change to Github, whereas manual deployment requires you to push the Deploy Branch button whenever you want a change made.
+- Once you have chosen your deployment method and have clicked Deploy Branch your application will be built and you should see the below View button, click this to open your application:
 
 ## Credit
+
+All the code used is entirely original and written by me. However I drew on resources such as Stack Overflow to fix various bugs and issues i encountered.
 
 ### Acknowledgements
 
