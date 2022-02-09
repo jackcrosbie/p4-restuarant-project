@@ -212,7 +212,7 @@ Heroku Settings You will need to set your Environment Variables - this is a key 
   - If using credentials you will need to add the credentials as a variable, the key is the name 'CREDS' and the value is the contents of your creds JSON
   - Add key: PORT & value 8000
 - Buildpacks are also required for proper deployment, simply click Add buildpack and search for the ones that you require.
-  - For this project, I needed to add Python and Node.js, in this order.
+  - For this project I needed to add Heroku Postgres.
 
 Heroku Deployment In the Deploy tab:
 
@@ -225,9 +225,11 @@ Heroku Deployment In the Deploy tab:
 
 ## Credit
 
-All the code used is entirely original and written by me. However I drew on resources such as Stack Overflow to fix various bugs and issues i encountered.
+All the code used is entirely original and written by me. However I drew on resources such as Stack Overflow, django.docs, tutor support and Slack to fix various bugs and issues i encountered.
 
 ### Acknowledgements
+
+As always I want to thank my mentor, Daisy McGirr for her fantastic advice, support and feedback throughout this project and beyond. I would also like to thank my peer Daisy Gunn for always being helpful, full of advice and willing to listen. 
 
 
 
