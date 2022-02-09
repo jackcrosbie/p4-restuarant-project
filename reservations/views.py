@@ -11,8 +11,8 @@ from .forms import ReservationForm
 # Create your views here.
 class ReservationsFormView(CreateView):
     model = Reservations
-    template_name = "reservations/reservations.html"
     form_class = ReservationForm
+    template_name = "reservations/reservations.html"
     success_url = "reservation_complete/"
 
     def form_valid(self, form):
@@ -21,20 +21,23 @@ class ReservationsFormView(CreateView):
 
 
 class EditReservationView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Reservations
     form_class = ReservationForm
     template_name = 'reservations/edit_reservation.html'
     success_url = "/reservations_account/"
-    model = Reservations
+    
 
     def test_func(self):
         return self.request.user == self.get_object().user
 
 
 class ReservationCompleteView(CreateView):
+    model = Reservations
+    form_class = ReservationForm
     template_name = "reservations/reservation_complete.html"
     success_url = "/reservation_complete/"
-    form_class = ReservationForm
-    model = Reservations
+    
+    
 
 
 class ReservationAccountView(ListView):
