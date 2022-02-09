@@ -192,7 +192,7 @@ _As a User I want to see messages when logging in and logging out so that i can 
 When user are logging in and logging out it is beneficial for them to see a message stating the action has occured. Again this is a safety issue and just confirms the action was undertaken so the user can navigate away from the website knowing they have been logged out. This helps prevents users staying logged in if an error occurs as the user will be alerted.
 
 ![log out message](![image](https://user-images.githubusercontent.com/82109134/153181129-d5669f06-8c1a-42f6-807a-197b197115fa.png)
-)
+
 
 Using Bootstrap I added messages so the user could see if he or she logged out or in. These messages show the users if they logged out successfuly or not. 
 
@@ -212,7 +212,7 @@ _As a User I want to be able to edit my bookings so that i can make a correction
 
 Once a user has registered and is logged in the account section of the website will become available. If a user navigated to the account page they will see any resevations that have displayed in a bootstrap image card. Pictured here:
 
-![edit reservation](![image](https://user-images.githubusercontent.com/82109134/153183280-3c54d8b8-e2df-42eb-915c-904112fc44a5.png)
+![edit reservation](https://user-images.githubusercontent.com/82109134/153183280-3c54d8b8-e2df-42eb-915c-904112fc44a5.png)
 
 Below the cards will be a button to either delete or edit a booking. This completes the CRUD functionality for the reservations on my website. Users are able to Create, Retrieve, Updated and Delete reservations they have made once they are registered and logged in.
 
