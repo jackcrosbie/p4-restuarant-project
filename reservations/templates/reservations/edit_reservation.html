@@ -4,18 +4,19 @@
 
 {% block content %}
 
-
+<!-- bootstrap container with content centered -->
 <div class="container mb-3">
     <h2 class="d-flex justify-content-center">Edit Your Reservation</h1>
 </div>
+<!-- reservations form with bootstrap stlying -->
 <div class="mx-auto form-group mt-2">
-
     <form action="{% url 'reservations' %}" method="post">
         {% csrf_token %}
         <table>
             {{ form.as_table }}
         </table>
         <div class="mt-3 d-flex justify-content-center">
+            <!-- button to confirm edits to reservations, bootstrap styled-->
             <button class="btn btn-dark" type="submit" value="Submit">Submit</button>
         </div>
     </form>

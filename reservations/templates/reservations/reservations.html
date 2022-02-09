@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- bootstrap container holding all html text inside -->
 <div class="container mb-3">
     <h2 class="d-flex justify-content-center">Make A Reservation</h1>
         <p class="text-center pt-3">
@@ -10,14 +11,15 @@
             Bookings for bigger groups have to be done through the from on the <strong>Contact Us</strong> section of the website!
         </p>
 </div>
+<!-- reservations form created in app and styled using bootstrap -->
 <div class="mx-auto form-group mt-2">
-
     <form action="{% url 'reservations' %}" method="post">
         {% csrf_token %}
         <table>
             {{ form.as_table }}
         </table>
         <div class="mt-3 d-flex justify-content-center">
+            <!-- submit button with bootstrap classes -->
             <button class="btn btn-dark" type="submit" value="Submit">Submit</button>
         </div>
     </form>

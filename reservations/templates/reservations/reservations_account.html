@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-
+<!-- bootstrap container -->
 <div class="container mb-3">
     <h2 class="d-flex justify-content-center">Edit or delete your reservation!</h1>
 </div>
@@ -12,7 +12,7 @@
 <ul>
     <!-- Iterate over reservations list -->
     {% for reservation in reservations %}
-
+    <!-- reservations created by user displayed in bootstrap cards-->
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{% static 'images/restuarant.jpg' %}" alt="Card restuarant image">
         <div class="card-body">
@@ -26,11 +26,11 @@
             </ul>
         </div>
     </div>
-    
+    <!-- buttons to take you to edit/delete reservation pages, bootsrap styled -->
     <a href="{% url 'edit_reservation' reservation.pk %}" type="button"  class="btn btn-dark">Edit</a> 
     <a href="{% url 'delete_reservation' reservation.pk %}" type="button" class="btn btn-dark">Delete</a>
     
-    <!-- If they haven't made a reservation  -->
+    <!-- return if they haven't made a reservation -->
     {% empty %}
     <div class="container-fluid d-flex justify-content-center">
         <div class="row mt-5 card bg-dark text-white">

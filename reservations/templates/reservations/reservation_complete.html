@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- bootstrap card telling you your reservation is complete -->
 <div class="card text-center mt-5">
     <div class="card-header">
       
@@ -8,6 +9,7 @@
     <div class="card-body">
       <h5 class="card-title">Request Submitted</h5>
       <p class="card-text">Thank you for your request.<br>We will be back in touch soon!</p>
+      <!-- anchor tag button to bring the user back to homepage -->
       <a href="{% url 'index' %}" class="btn btn-dark">HOME</a>
     </div>
     <div class="card-footer text-muted">

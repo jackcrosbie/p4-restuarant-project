@@ -2,12 +2,14 @@
 {% load static %}
 
 {% block content %}
+<!-- bootstrap container with content centered for symmetry-->
 <h2 class="d-flex justify-content-center">Confirm Reservation Deletion</h2>
 <div class="d-flex justify-content-center pt-3">
     <form method="post">
         {% csrf_token %}
         <p class="text-center pt-3" id="p-big-text">Are you sure you want to delete <strong>Reservation</strong>?</p>
         <div class="mt-3 d-flex justify-content-center">
+            <!-- delete button for deleting reservations from database -->
             <button class="btn btn-dark" type="submit" value="Submit">Submit</button>
         </div>
     </form>
