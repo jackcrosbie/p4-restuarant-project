@@ -24,14 +24,17 @@ event_type = (
 phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$")
 
 
-
 class ContactUs(models.Model):
 
     """ reservation form categories and attributes """
     name = models.CharField(max_length=50)
-    phone_number = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True)
+    phone_number = models.CharField(
+        validators=[phoneNumberRegex], max_length=16, unique=True
+        )
     email = models.EmailField()
     date = models.DateField()
-    time = models.CharField(choices=time_options, default="12pm", max_length=10)
+    time = models.CharField(
+        choices=time_options, default="12pm", max_length=10
+        )
     event = models.CharField(choices=event_type, max_length=50)
     message = models.TextField()
