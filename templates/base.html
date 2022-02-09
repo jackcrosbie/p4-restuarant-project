@@ -29,17 +29,17 @@
                 <!-- for loop to authenticate user and show links based on authentication-->
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" id="nav-1" href="{% url 'reservations_account' %}">Account</a>
+                    <a class="nav-link nav-1" href="{% url 'reservations_account' %}">Account</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="nav-1" href="{% url 'account_logout' %}">Logout</a>
+                    <a class="nav-link nav-1" href="{% url 'account_logout' %}">Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" id="nav-1" href="{% url 'account_signup' %}">Register</a>
+                    <a class="nav-link nav-1" href="{% url 'account_signup' %}">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="nav-1" href="{% url 'account_login' %}">Login</a>
+                    <a class="nav-link nav-1" href="{% url 'account_login' %}">Login</a>
                 </li>
                 {% endif %}
             </ul>
@@ -83,11 +83,9 @@
         </div>
     </div>
 
-    <p>
         {% block content %}
 
         {% endblock %}
-    </p>
     <!-- stick footer with bootstrap classes -->
     <footer id="sticky-footer" class="flex-shrink-0 py-4 text-white-50">
         <div class="container text-center">
