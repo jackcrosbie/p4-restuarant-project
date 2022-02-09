@@ -27,9 +27,9 @@
         </div>
     </div>
     <!-- buttons to take you to edit/delete reservation pages, bootsrap styled -->
-    <a href="{% url 'edit_reservation' reservation.pk %}" type="button"  class="btn btn-dark">Edit</a> 
+    <a href="{% url 'edit_reservation' reservation.pk %}" type="button" class="btn btn-dark">Edit</a>
     <a href="{% url 'delete_reservation' reservation.pk %}" type="button" class="btn btn-dark">Delete</a>
-    
+
     <!-- return if they haven't made a reservation -->
     {% empty %}
     <div class="container-fluid d-flex justify-content-center">

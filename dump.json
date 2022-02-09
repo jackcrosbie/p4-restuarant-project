@@ -1,0 +1,1 @@
+[{"model": "reservations.reservations", "pk": "262b3fc6-64dc-4b79-bb1d-d0d6ad9d3943", "fields": {"user": 14, "name": "fred", "phone_number": "0877777777", "email": "fred@email.com", "date": "2022-02-26", "time": "12:00", "number_of_party": 1}}]
