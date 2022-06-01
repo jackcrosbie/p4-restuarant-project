@@ -25,10 +25,10 @@ class EditReservationView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Reservations
     form_class = ReservationForm
     template_name = 'reservations/edit_reservation.html'
-    success_url = "/reservations_account/"
+    success_url = "/reservations/reservations_account/"
 
     def test_func(self):
-        return self.request.user == self.get_object().user
+        return self.request.user == self.get_object().user        
 
 
 class ReservationCompleteView(CreateView):

@@ -10,14 +10,14 @@
 </div>
 <!-- reservations form with bootstrap stlying -->
 <div class="mx-auto form-group mt-2">
-    <form action="{% url 'reservations' %}" method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <table>
             {{ form.as_table }}
         </table>
         <div class="mt-3 d-flex justify-content-center">
             <!-- button to confirm edits to reservations, bootstrap styled-->
-            <button class="btn btn-dark" type="submit" value="Submit">Submit</button>
+            <button class="btn btn-dark" type="submit">Submit</button>
         </div>
     </form>
 </div>
