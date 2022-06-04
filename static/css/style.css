@@ -36,7 +36,6 @@ nav,
 ul,
 li {
     font-size: 1.1em;
-    color: #FFEEDB;
 }
 
 #nav-1 {
@@ -59,3 +58,5 @@ li {
 #sticky-footer {
     background-color: #0D324D;
 }
+
+/* ---------------------- css reservation card text */
