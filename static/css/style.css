@@ -32,8 +32,11 @@ h2 {
 
 /* ---------------------- css for navbars */
 
-nav, ul, li {
+nav,
+ul,
+li {
     font-size: 1.1em;
+    color: #FFEEDB;
 }
 
 #nav-1 {
@@ -49,10 +52,9 @@ nav, ul, li {
 #navbar-color2 {
     background-color: #0D324D;
     color: #FFEEDB;
-    text-decoration: none;
 }
 
-/* ---------------------- css for footer */ 
+/* ---------------------- css for footer */
 
 #sticky-footer {
     background-color: #0D324D;
