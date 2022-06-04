@@ -59,3 +59,10 @@ li {
     background-color: #0D324D;
     margin-top: 2em;
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    img {
+        width: 100vw;
+    }
+}
