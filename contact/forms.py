@@ -12,4 +12,3 @@ class ContactUsForm(forms.ModelForm):
         fields = [
             'name', 'phone_number', 'email', 'time', 'event', 'message'
             ]
-

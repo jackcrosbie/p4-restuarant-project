@@ -65,4 +65,8 @@ li {
     img {
         width: 100vw;
     }
+
+    .home-text {
+        width: 100%;
+    }
 }

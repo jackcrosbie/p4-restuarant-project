@@ -7,7 +7,7 @@
 <!-- bootstrap container with abous us section for hompage inside-->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-8">
+        <div class="col-8 home-text">
             <h2 class="text-center">About Us</h2>
             <p class="p-5 mt-3">Jack's Bistro started as family run business back in the early 2000s.<br>
                 Located on the south coast of Ireland we have endevoured to use all this beautiful country as to offer
@@ -23,9 +23,9 @@
         </div>
         <div class="col-4">
             <!-- image showing south of ireland on homepage with bootstrap styling-->
-            <img src="{% static 'images/southern-ireland.jpg' %}" class="img-thumbnail mt-5" alt="south of Ireland.">
+            <img src="{% static 'images/southern-ireland.jpg' %}" class="img-thumbnail mt-5 d-none d-md-block d-xl-none" alt="south of Ireland.">
         </div>
-        <div class="col-8 p-5 mt-3">
+        <div class="col-8 p-5 mt-3 home-text">
             <p> Our strive for excellent continues and we encourage honest and open feedback from all our customers.<br>
                 Head over to <strong>Reservations</strong> section to make a booking or the <strong>Contact Us</strong>
                 section to ask a question, make a special request or leave us some feedback!
@@ -34,7 +34,7 @@
         </div>
         <div class="col-4">
             <!-- image showing some food from the restuarant with bootstrap styling-->
-            <img src="{% static 'images/steak.jpg' %}" class="img-thumbnail" alt="steak and chips">
+            <img src="{% static 'images/steak.jpg' %}" class="img-thumbnail d-none d-md-block d-xl-none" alt="steak and chips">
         </div>
     </div>
 </div>
