@@ -247,6 +247,58 @@ The ability to be able to check the availability or number of tables left for a 
 
 ### Manual Testing
 
+#### NavBar
+
+To begin my testing I checked to ensure all the links on the navbar worked. I did this but clicking each link and ensuring it brought me to the desired location.
+
+![navbar-2](https://user-images.githubusercontent.com/82109134/153136781-2d5cb2fc-3a63-46b5-80ad-2da21588c896.png)
+
+Each of the links on the navbar brought me to the correct page e.g the "reservations" link brought me to the make a reservation page as intended.
+
+#### Registration/Login/Logout
+
+After testing the navbar to ensure everything was working I then decided to test the allauth registration and login.
+I filled in the registration form and was able to create a new user. 
+
+![registration form](https://github.com/jackcrosbie/p4-restuarant-project/blob/main/assets/documents/images/registration-form.png?raw=true)
+
+This all worked correctly and brought me to the relevant pages.
+After my registration was complete I then checked I could log in as the newly created user. This again all worked as hoped so I was able to move on.
+
+Next i tested the log out functionality was working. I clicked the log out button on the first navbar and was prompted to confirm I wanted to log out.
+After confirming I wanted to log out I was logged out and no longer had access to the accounts page. This meant I couldn't see, edit or delete reservations made.
+This was the outcome I had hoped for.
+
+#### Reservation CRUD Functionality
+
+I set about testing the create a reservations function after creating and logging in as a user.
+I filled in the reservation form and was able to create a reservation, which displayed as a card in the account page.
+
+The information was displayed in a card with an edit and delete bottom below.
+
+![edit reservation](https://user-images.githubusercontent.com/82109134/153183280-3c54d8b8-e2df-42eb-915c-904112fc44a5.png)
+
+Once I checked to make sure all the information was correct I decided to test the edit function.
+After clicking the edit button I was redirected to the reservations form with the previous information inputted.
+I went about editing the information and then clicked the submit button. My reservation card updated with the new information and replaced the old reservations card.
+
+This showed to me that the update/edit functionality of my reservations was working.
+
+Next I decided to test the delete functionality on my reservations. 
+Again I went back to the accounts page which stored the reservations.
+Under the reservation I had just edited I clicked the 'Delete' button. This, as expected, displayed a message asking me to confirm If I wanted to go ahead and delete the reservation.
+After confirming I did the reervation was deleted.
+I navigated back to the accounts page to check and the reservation I had made was deleted confirmed the delete element of my CRUD functionality was working as intended.
+
+#### Contact Us Form
+
+Next I decided to check the contact form was working correctly. I navigated to the page, filled out the fields and left a message. I hit submit, was greated with a success message and redirected to click a Home link to return to the homepage. I clicked the home link and was returned to the homepage. This told me that the contact form was working as intended.
+
+#### General
+
+After testing all the specific elements of the site were working I then navigated through the site looking for any colour clashes, typos or anything of that ilk.
+After scrolling through the various pages I found myself happy that there was no major flaws left in my project and that everything was working as intended.
+
 ### Automated Testing
 
 
