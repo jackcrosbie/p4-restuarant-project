@@ -10,8 +10,6 @@ class ContactUsForm(forms.ModelForm):
         """ form model, fields and widgets used"""
         model = ContactUs
         fields = [
-            'name', 'phone_number', 'email', 'date', 'time', 'event', 'message'
+            'name', 'phone_number', 'email', 'time', 'event', 'message'
             ]
-        widgets = {
-            'date': DatePickerInput(format='%d-%m-%Y'),
-        }
+

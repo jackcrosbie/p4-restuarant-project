@@ -32,7 +32,6 @@ class ContactUs(models.Model):
         validators=[phoneNumberRegex], max_length=16, unique=True
         )
     email = models.EmailField()
-    date = models.DateField()
     time = models.CharField(
         choices=time_options, default="12pm", max_length=10
         )
