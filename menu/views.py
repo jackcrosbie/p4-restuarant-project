@@ -1,15 +1,15 @@
-from django.shortcuts import render
+""" imports for django, models and forms """
 from django.views.generic.edit import CreateView
 from .models import Menu
 from .forms import MenuForm
 
-# Create your views here.
+
 class MenuFormView(CreateView):
+    """ view for menu form"""
     model = Menu()
     template_name = 'menu/menu.html'
     form_class = MenuForm
-    
+
     def form_valid(self, form):
-        
-        # this is what the method needs to run as expected when called, otherwise it's missing info it needs
+        """ form validation """
         return super().form_valid(form)

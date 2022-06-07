@@ -1,6 +1,5 @@
 """ imports from django, widgets and models.py """
 from django import forms
-from reservations.widgets import DatePickerInput
 from .models import ContactUs
 
 
